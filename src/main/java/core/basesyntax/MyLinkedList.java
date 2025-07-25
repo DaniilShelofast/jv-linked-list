@@ -55,6 +55,7 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
                 tail = newNode;
             }
             size++;
+            modCount++;
             return;
         }
 
@@ -68,6 +69,7 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
                 head = newNode;
             }
             size++;
+            modCount++;
             return;
         }
 
@@ -77,6 +79,7 @@ public class MyLinkedList<T> implements MyLinkedListInterface<T> {
         prev.next = newNode;
         current.prev = newNode;
         size++;
+        modCount++;
 
     }
 
